@@ -9,13 +9,13 @@ import { MongooseModule } from '@nestjs/mongoose';
 
 @Module({
   imports: [
-    ConfigModule.forRoot({
-      envFilePath: '.env',
-      isGlobal: true,
-    }),
-    //connect to mongodb
-    MongooseModule.forRoot(process.env.MONGO_UI),
-    MessagingModule
+    // ConfigModule.forRoot({
+    //   envFilePath: '.env',
+    //   isGlobal: true,
+    // }),
+    // //connect to mongodb
+    // MongooseModule.forRoot(process.env.MONGO_UI),
+    // MessagingModule
   ],
   controllers: [AppController, MessagingController],
   providers: [AppService, MessagingService],
